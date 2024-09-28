@@ -7,7 +7,7 @@ import { TeamModel } from "../models/team.model.js";
 import { BondBidding } from "../models/bondBidding.model.js";
 
 const dev = process.env.NODE_ENV !== "production";
-const hostname = "localhost";
+const hostname = process.env.HOST? process.env.HOST: "localhost";
 const port = 3001;
 // when using middleware `hostname` and `port` must be provided below
 const app = next({ dev, hostname, port });
